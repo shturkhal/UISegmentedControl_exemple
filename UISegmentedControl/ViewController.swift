@@ -10,15 +10,11 @@ import UIKit
 class ViewController: UIViewController {
 
     var segmentControl = UISegmentedControl()
-    
     var imageView = UIImageView()
     let imageArray = [UIImage(named: "printer.png"),
                       UIImage(named: "documents.png"),
                       UIImage(named: "folder.png")]
-    
     var menuArray = ["one", "two", "three"]
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +31,7 @@ class ViewController: UIViewController {
         self.segmentControl.addTarget(self, action: #selector(segmentedValue(target:)), for: .valueChanged)
         
     }
-
+// set up target
     @objc func segmentedValue(target: UISegmentedControl) {
         if target == self.segmentControl {
             let segmentedIndex = target.selectedSegmentIndex
